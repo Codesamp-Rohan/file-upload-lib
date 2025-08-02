@@ -4,7 +4,7 @@ import type { FileUploadConfig } from './components/file-upload/ config-schema'
 import { FileUpload } from './components/file-upload'
 import * as Dialog from '@radix-ui/react-dialog'
 import { Pencil2Icon } from '@radix-ui/react-icons'
-import FixedImage from "./FixedImage.tsx";
+import FixedImage from "./FixedImage";
 
 const defaultDropzoneConfig: FileUploadConfig = {
     variant: 'dropzone',
