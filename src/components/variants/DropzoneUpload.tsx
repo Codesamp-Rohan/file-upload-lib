@@ -106,10 +106,11 @@ export const DropzoneUpload = ({ config }: { config: FileUploadConfig }) => {
         config.theme.size === 'lg' ? 'size-lg' : config.theme.size === 'sm' ? 'size-sm' : 'size-md'
     const radiusClass = `radius-${config.theme.radius}`
 
+
     return (
         <>
             <div className="upload-container">
-                {uploadedFiles.length >= config.maxFileSizeMB ? (
+                {uploadedFiles.length >= config.maxFileLimit ? (
                     <div className="dropzone lock">
                         <div className="dropzone-content">
                             <LockClosedIcon className="upload-icon" />

@@ -75,6 +75,7 @@ export const SingleMaxImageUpload = ({ config }: { config: FileUploadConfig }) =
         config.theme.size === 'sm' ? 'size-sm' :
             'size-md'
     const radiusClass = `radius-${config.theme.radius}`
+    
 
     return (
         <div className="upload-container single-image-upload">

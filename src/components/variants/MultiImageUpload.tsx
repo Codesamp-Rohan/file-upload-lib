@@ -103,13 +103,10 @@ export const MultiImageUpload = ({ config }: { config: FileUploadConfig }) => {
         }
     }
 
-    const formatFileSize = (bytes: number) => {
-        if (bytes === 0) return '0 Bytes'
-        const k = 1024
-        const sizes = ['Bytes', 'KB', 'MB', 'GB']
-        const i = Math.floor(Math.log(bytes) / Math.log(k))
-        return `${parseFloat((bytes / Math.pow(k, i)).toFixed(2))} ${sizes[i]}`
-    }
+    const sizeClass = config.theme.size === 'lg' ? 'size-lg' :
+        config.theme.size === 'sm' ? 'size-sm' :
+            'size-md'
+    const radiusClass = `radius-${config.theme.radius}`
 
     return (
         <div className="upload-container">
@@ -119,7 +116,7 @@ export const MultiImageUpload = ({ config }: { config: FileUploadConfig }) => {
                 onDragLeave={handleDragLeave}
                 onDragOver={handleDragOver}
                 onDrop={handleDrop}
-                className={`dropzone ${isDragging ? 'dragging' : ''}`}
+                className={`dropzone ${sizeClass} ${radiusClass} ${isDragging ? 'dragging' : ''}`}
             >
                 <div className="dropzone-content">
                     <UploadIcon className="upload-icon" />

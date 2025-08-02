@@ -1,6 +1,7 @@
 export type FileUploadConfig = {
     variant: 'button' | 'dropzone' | 'single-image' | 'multi-image' | 'mixed-card'
     maxFileSizeMB: number
+    maxFileLimit: number
     fileTypes: string[]
     theme: {
         size: 'sm' | 'md' | 'lg'

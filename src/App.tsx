@@ -8,6 +8,7 @@ import { Pencil2Icon } from '@radix-ui/react-icons'
 const defaultDropzoneConfig: FileUploadConfig = {
     variant: 'dropzone',
     maxFileSizeMB: 5,
+    maxFileLimit: 5,
     fileTypes: ['jpg', 'png'],
     theme: {
         size: 'md',
@@ -22,6 +23,7 @@ const defaultDropzoneConfig: FileUploadConfig = {
 const defaultButtonConfig: FileUploadConfig = {
     variant: 'button',
     maxFileSizeMB: 5,
+    maxFileLimit: 5,
     fileTypes: ['jpg', 'png', 'pdf'],
     theme: {
         size: 'md',
@@ -36,6 +38,7 @@ const defaultButtonConfig: FileUploadConfig = {
 const defaultSingleImageConfig: FileUploadConfig = {
     variant: 'single-image',
     maxFileSizeMB: 3,
+    maxFileLimit: 1,
     fileTypes: ['jpg', 'jpeg', 'png'],
     theme: {
         size: 'md',
@@ -50,6 +53,7 @@ const defaultSingleImageConfig: FileUploadConfig = {
 const defaultMultiImageConfig: FileUploadConfig = {
     variant: 'multi-image',
     maxFileSizeMB: 5,
+    maxFileLimit: 5,
     fileTypes: ['jpg', 'jpeg', 'png', 'gif'],
     theme: {
         size: 'md',
@@ -64,6 +68,7 @@ const defaultMultiImageConfig: FileUploadConfig = {
 const defaultMixedCardConfig: FileUploadConfig = {
     variant: 'mixed-card',
     maxFileSizeMB: 10,
+    maxFileLimit: 5,
     fileTypes: ['jpg', 'jpeg', 'png', 'pdf', 'doc', 'docx', 'xls', 'xlsx'],
     theme: {
         size: 'md',
@@ -143,6 +148,7 @@ export default function Demo() {
 
     return (
         <div className="demo-wrapper">
+            <h1 className="msg">Frontend Assignment by Dodo Payment</h1>
             {/* Dropzone */}
             <div className="upload-section">
                 <div className="upload-header">
@@ -315,6 +321,8 @@ export default function Demo() {
                     </div>
                 </div>
             </div>
+
+            <h1 className="msg">Made by Rohan Chaudhary</h1>
 
         </div>
     )

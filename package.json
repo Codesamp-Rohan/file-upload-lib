@@ -10,7 +10,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lib:build": "tsc -p tsconfig.build.json"
+    "lib:build": "tsc -p tsconfig.build.json",
+    "prepare": "npm run lib:build"
   },
   "keywords": ["file-upload", "react", "component-library"],
   "author": "Rohan Chaudhary",
