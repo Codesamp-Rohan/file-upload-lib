@@ -109,11 +109,11 @@ export const DropzoneUpload = ({ config }: { config: FileUploadConfig }) => {
     return (
         <>
             <div className="upload-container">
-                {uploadedFiles.length >= 5 ? (
+                {uploadedFiles.length >= config.maxFileSizeMB ? (
                     <div className="dropzone lock">
                         <div className="dropzone-content">
                             <LockClosedIcon className="upload-icon" />
-                            <h4>Maximum files has been uploaded, which is 5.</h4>
+                            <h4>Maximum files has been uploaded, which is {config.maxFileSizeMB}</h4>
                         </div>
                         <input
                             ref={inputRef}
