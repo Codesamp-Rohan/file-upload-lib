@@ -105,7 +105,7 @@ const config: FileUploadConfig = {
 
 ## 🧪 Live Demo
 
-Visit: [https://file-upload-lib.vercel.app](https://your-vercel-demo.vercel.app)
+Visit: [https://file-upload-lib.vercel.app](https://file-upload-lib.vercel.app)
 
 - Test each variant
 - Live JSON config editor
