@@ -16,9 +16,19 @@ html {
     overflow: hidden;
 }
 
-
 body {
     margin: 0;
+}
+
+.fixed-image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  z-index: -1;
+  filter: blur(100px) brightness(0.2);
 }
 
 .msg {
@@ -78,6 +88,7 @@ body {
   margin: 0 auto;
   border-right: 1px solid #242424;
   border-left: 1px solid #242424;
+  background-color: rgb(0, 0, 0);
 }
 .demo-wrapper:last-child {
   padding-bottom: 2rem;
@@ -182,7 +193,6 @@ body {
   gap: 1rem;
   width: 100%;
   padding: 40px;
-  border-radius: 8px;
   border-bottom: 1px solid #242424;
 }
 
@@ -276,20 +286,6 @@ button:hover{
   gap: 1rem;
 }
 
-.close-button {
-  padding: 0.5rem 1rem;
-  background-color: #e5e5e5;
-  border: none;
-  border-radius: 4px;
-  color: #1a1a1a;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.close-button:hover {
-  background-color: #d4d4d4;
-}
-
 @keyframes overlayShow {
   from {
     opacity: 0;
@@ -321,15 +317,6 @@ button:hover{
     color: #ddd;
     font-size: 1rem;
     font-weight: bold;
-  }
-
-  .close-button {
-    background-color: #2a2a2a;
-    color: #ffffff;
-  }
-
-  .close-button:hover {
-    background-color: #3a3a3a;
   }
 
   .config-textarea {

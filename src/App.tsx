@@ -4,6 +4,7 @@ import type { FileUploadConfig } from './components/file-upload/ config-schema'
 import { FileUpload } from './components/file-upload'
 import * as Dialog from '@radix-ui/react-dialog'
 import { Pencil2Icon } from '@radix-ui/react-icons'
+import FixedImage from "./FixedImage.tsx";
 
 const defaultDropzoneConfig: FileUploadConfig = {
     variant: 'dropzone',
@@ -147,10 +148,10 @@ export default function Demo() {
 
 
     return (
+        <>
+        <FixedImage />
         <div className="demo-wrapper">
             <h1 className="msg">Frontend Assignment by Dodo Payment</h1>
-
-
             <div className="upload-section">
                 <div className="upload-header">
                     <h2 className="upload-title">Dropzone Upload</h2>
@@ -323,5 +324,6 @@ export default function Demo() {
             <h1 className="msg">Made by Rohan Chaudhary</h1>
 
         </div>
+            </>
     )
 }
