@@ -7,10 +7,10 @@
   "types": "dist/index.d.ts",
   "files": ["dist"],
   "scripts": {
-      "dev": "vite",
-      "build": "tsc -p tsconfig.build.json",
-      "prepare": "tsc -p tsconfig.build.json",
-      "prepublishOnly": "npm run build"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lib:build": "tsc -p tsconfig.build.json"
   },
   "keywords": ["file-upload", "react", "component-library"],
   "author": "Rohan Chaudhary",
