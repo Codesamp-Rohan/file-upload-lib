@@ -1,4 +1,4 @@
-# 📦 file-upload-lib
+# 📦 A Config-Driven File Upload Component
 
 A fully customizable, accessible, and config-driven file upload component library built with **React**, **TypeScript**, **Radix UI**, and **your own CSS** (Tailwind or custom styles) — inspired by `shadcn/ui`.
 
