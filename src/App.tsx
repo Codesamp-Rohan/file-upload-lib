@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import type { FileUploadConfig } from './components/file-upload/config-schema'
+import type { FileUploadConfig } from './components/file-upload/ config-schema'
+// Rest of the file remains the same
 import { FileUpload } from './components/file-upload'
 import * as Dialog from '@radix-ui/react-dialog'
 import { Pencil2Icon } from '@radix-ui/react-icons'

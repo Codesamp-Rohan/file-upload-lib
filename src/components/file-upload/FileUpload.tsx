@@ -1,9 +1,9 @@
-import type { FileUploadConfig} from './config-schema'
-import { DropzoneUpload } from '../variants/DropzoneUpload.tsx'
+import type { FileUploadConfig} from './ config-schema'
+import { DropzoneUpload } from '../variants/DropzoneUpload'
 import {ButtonUpload} from "../variants/ButtonUpload";
 import {SingleMaxImageUpload} from "../variants/SingleMaxImageUpload";
-import {MultiImageUpload} from "../variants/MultiImageUpload.tsx";
-import {MixedCard} from "../variants/MixedCard.tsx";
+import {MultiImageUpload} from "../variants/MultiImageUpload";
+import {MixedCard} from "../variants/MixedCard";
 
 export const FileUpload = ({ config }: { config: FileUploadConfig }) => {
     switch (config.variant) {

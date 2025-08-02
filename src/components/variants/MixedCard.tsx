@@ -1,8 +1,7 @@
 
-import type {FileUploadConfig} from "../file-upload/config-schema.ts";
+import type {FileUploadConfig} from "../file-upload/ config-schema";
 import {UploadIcon, Cross2Icon} from "@radix-ui/react-icons";
 import {useRef, useState} from "react";
-import * as Dialog from '@radix-ui/react-dialog';
 
 type UploadedFile = {
     name: string;
@@ -14,7 +13,6 @@ type UploadedFile = {
 export const MixedCard = ({config} : {config: FileUploadConfig}) => {
     const inputRef = useRef<HTMLInputElement | null>(null)
     const [uploadedFiles, setUploadedFiles] = useState<UploadedFile[]>([])
-    const [previewImage, setPreviewImage] = useState<UploadedFile | null>(null)
 
     const handleFiles = (files: FileList | null) => {
         if (!files) return
@@ -35,13 +33,6 @@ export const MixedCard = ({config} : {config: FileUploadConfig}) => {
 
     const removeFile = (id: string) => {
         setUploadedFiles(prev => prev.filter(file => file.id !== id))
-    }
-
-    const previewFile = (id: string) => {
-        const file = uploadedFiles.find(f => f.id === id)
-        if (file) {
-            setPreviewImage(file)
-        }
     }
 
     const formatFileSize = (bytes: number): string => {

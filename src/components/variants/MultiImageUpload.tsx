@@ -1,5 +1,5 @@
 import { useRef, useState, DragEvent } from 'react'
-import type { FileUploadConfig } from '../file-upload/config-schema'
+import type { FileUploadConfig } from '../file-upload/ config-schema'
 import { UploadIcon, Cross2Icon } from '@radix-ui/react-icons'
 import * as Dialog from '@radix-ui/react-dialog'
 

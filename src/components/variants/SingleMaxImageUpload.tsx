@@ -1,6 +1,6 @@
 
 import { useRef, useState } from 'react'
-import type { FileUploadConfig } from '../file-upload/ config-schema.ts'
+import type { FileUploadConfig } from '../file-upload/ config-schema'
 import { UploadIcon, Cross2Icon, EyeOpenIcon } from '@radix-ui/react-icons'
 import * as Dialog from '@radix-ui/react-dialog'
 
