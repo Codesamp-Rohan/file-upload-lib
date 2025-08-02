@@ -44,7 +44,8 @@ import type { FileUploadConfig } from 'file-upload-lib'
 
 const config: FileUploadConfig = {
   variant: 'dropzone',
-  maxFileSizeMB: 5,
+  maxFileSizeMB: 5, 
+    maxFileLimit: 5,
   fileTypes: ['jpg', 'png'],
   theme: {
     size: 'md',
@@ -79,7 +80,12 @@ const config: FileUploadConfig = {
 {
   "variant": "dropzone",
   "maxFileSizeMB": 5,
-  "fileTypes": ["jpg", "png", "pdf"],
+  "maxFileLimit": 5,
+  "fileTypes": [
+    "jpg",
+    "png",
+    "pdf"
+  ],
   "theme": {
     "size": "md",
     "radius": "md",
@@ -99,7 +105,7 @@ const config: FileUploadConfig = {
 
 ## 🧪 Live Demo
 
-Visit: [https://your-vercel-demo.vercel.app](https://your-vercel-demo.vercel.app)
+Visit: [https://file-upload-lib.vercel.app](https://your-vercel-demo.vercel.app)
 
 - Test each variant
 - Live JSON config editor

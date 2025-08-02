@@ -149,7 +149,8 @@ export default function Demo() {
     return (
         <div className="demo-wrapper">
             <h1 className="msg">Frontend Assignment by Dodo Payment</h1>
-            {/* Dropzone */}
+
+
             <div className="upload-section">
                 <div className="upload-header">
                     <h2 className="upload-title">Dropzone Upload</h2>
@@ -183,7 +184,6 @@ export default function Demo() {
                 </div>
             </div>
 
-            {/* Button Upload */}
             <div className="upload-section">
                 <div className="upload-header">
                     <h2 className="upload-title">Button Upload</h2>
@@ -217,7 +217,6 @@ export default function Demo() {
                 </div>
             </div>
 
-            {/* Single Image Upload */}
             <div className="upload-section">
                 <div className="upload-header">
                     <h2 className="upload-title">Single Image Upload</h2>
@@ -251,7 +250,6 @@ export default function Demo() {
                 </div>
             </div>
 
-            {/* Multi Image Upload */}
             <div className="upload-section">
                 <div className="upload-header">
                     <h2 className="upload-title">Multi Image Upload</h2>

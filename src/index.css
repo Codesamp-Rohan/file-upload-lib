@@ -83,8 +83,6 @@ body {
   padding-bottom: 2rem;
 }
 
-/* Existing styles remain the same */
-
 /* New styles for the dropzone component */
 .dropzone {
   cursor: pointer;
@@ -168,7 +166,6 @@ body {
 .radius-lg { border-radius: 0.5rem; }
 .radius-full { border-radius: 9999px; }
 
-/* Demo container styles */
 .demo-container {
   display: flex;
   flex-direction: column;

@@ -102,7 +102,6 @@ export const MultiImageUpload = ({ config }: { config: FileUploadConfig }) => {
             setPreviewImage(file)
         }
     }
-
     const sizeClass = config.theme.size === 'lg' ? 'size-lg' :
         config.theme.size === 'sm' ? 'size-sm' :
             'size-md'
