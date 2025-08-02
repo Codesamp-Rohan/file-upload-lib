@@ -1,8 +1,8 @@
 # 📦 file-upload-lib
 
-A fully customizable, accessible, and config-driven file upload component library built with **React**, **TypeScript**, **Radix UI**, and **TailwindCSS (or vanilla CSS)** — inspired by `shadcn/ui`.
+A fully customizable, accessible, and config-driven file upload component library built with **React**, **TypeScript**, **Radix UI**, and **your own CSS** (Tailwind or custom styles) — inspired by `shadcn/ui`.
 
-Supports multiple UI variants, JSON-based configuration, previews, and upload rules — ideal for integrating flexible file uploads into design systems or products.
+Supports multiple upload variants, JSON-based behavior and styling, previews, file validation, and maximum limits — perfect for integrating modular, user-friendly file upload in real-world apps.
 
 ---
 
@@ -13,24 +13,25 @@ Supports multiple UI variants, JSON-based configuration, previews, and upload ru
 - 🖼️ Single Image Upload
 - 🖼️🖼️ Multi Image Grid Upload
 - 🧾 Mixed File Card/Table Upload
-- ⚙️ Configurable via JSON
+- ⚙️ JSON-configurable UI and behavior
 - ✅ Type-safe with `FileUploadConfig`
-- 🧑‍💻 Developer-friendly and accessible
+- ♿ Accessible with Radix UI
+- 🧪 Local and npm-installable
 
 ---
 
 ## 📦 Installation
 
+### 🔧 For local development and testing
+
+From the library root:
 ```bash
-npm install file-upload-lib
-# OR
-pnpm add file-upload-lib
+npm pack
 ```
 
-Or use it locally:
-
+Then install in another project:
 ```bash
-pnpm pack
+npm install /absolute/path/to/file-upload-lib-1.0.0.tgz
 ```
 
 ---
@@ -39,8 +40,9 @@ pnpm pack
 
 ```tsx
 import { FileUpload } from 'file-upload-lib'
+import type { FileUploadConfig } from 'file-upload-lib'
 
-const config = {
+const config: FileUploadConfig = {
   variant: 'dropzone',
   maxFileSizeMB: 5,
   fileTypes: ['jpg', 'png'],
@@ -50,7 +52,7 @@ const config = {
     iconPosition: 'left'
   },
   labels: {
-    dropzoneText: 'Drop your files here or click'
+    dropzoneText: 'Drop your files here or click to upload'
   }
 }
 
@@ -61,24 +63,23 @@ const config = {
 
 ## 🔧 Supported Variants
 
-| Variant             | Description                           |
-|---------------------|---------------------------------------|
-| `dropzone`          | Drag-and-drop UI with previews        |
-| `button`            | Simple upload button with list        |
-| `single-image`      | Upload + preview one image            |
-| `multi-image-grid`  | Upload multiple images in a grid      |
-| `file-card`         | Upload files with rich card previews  |
-| `file-table`        | (optional) For future tabular layout  |
+| Variant          | Description                              |
+|------------------|------------------------------------------|
+| `dropzone`       | Drag-and-drop zone with preview cards     |
+| `button`         | Upload button with file info list         |
+| `single-image`   | Upload a single image with large preview  |
+| `multi-image`    | Upload multiple images in grid layout     |
+| `mixed-card`     | Mixed file preview with card actions      |
 
 ---
 
-## ✨ JSON Config Structure
+## ✨ JSON Config Schema
 
 ```json
 {
   "variant": "dropzone",
   "maxFileSizeMB": 5,
-  "fileTypes": ["jpg", "png"],
+  "fileTypes": ["jpg", "png", "pdf"],
   "theme": {
     "size": "md",
     "radius": "md",
@@ -87,50 +88,60 @@ const config = {
   "labels": {
     "dropzoneText": "Drop files here",
     "buttonText": "Upload Files",
-    "singleImageText": "Upload a single image"
+    "singleImageText": "Upload a single image",
+    "multiImageText": "Upload multiple images",
+    "mixedCardText": "Upload documents"
   }
 }
 ```
 
 ---
 
-## 🧪 Demo
+## 🧪 Live Demo
 
-Includes a `/demo` page with:
-- Live configuration editor (Radix Dialog + JSON)
-- All variants rendered
-- Real-time switching via JSON
+Visit: [https://your-vercel-demo.vercel.app](https://your-vercel-demo.vercel.app)
+
+- Test each variant
+- Live JSON config editor
+- Real-time component preview
 
 ---
 
 ## 🛠 Tech Stack
 
 - React + TypeScript
-- TailwindCSS or Custom CSS
+- Vite
 - Radix UI Primitives
-- Local image previews (no backend)
+- TailwindCSS or vanilla CSS
+- JSON-driven props
+- No backend — all mock uploads
 
 ---
 
-## 💡 Development
+## 🔧 Dev & Build
 
 ```bash
-pnpm install
-pnpm dev
-```
+# Run dev demo
+npm run dev
 
-To create a local `.tgz` file for testing:
+# Build demo for Vercel
+npm run build
 
-```bash
-pnpm pack
+# Build library for npm
+npm run lib:build
+
+# Pack npm tarball
+npm pack
 ```
 
 ---
 
-## 📂 File Structure
+## 📁 Project Structure
 
 ```
 src/
+  index.ts                    # library entry
+  main.tsx                    # demo site entry
   components/
     file-upload/
       FileUpload.tsx
@@ -140,11 +151,11 @@ src/
         ButtonUpload.tsx
         SingleMaxImageUpload.tsx
         MultiImageUpload.tsx
-        FileTableUpload.tsx (optional)
+        MixedCardUpload.tsx
 ```
 
 ---
 
 ## 📌 License
 
-MIT — use freely, attribute optionally ✨
+MIT — use freely, credit optionally ✨
